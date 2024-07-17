@@ -15,8 +15,8 @@ async function getPokemons(): Promise<IPokemon[]> {
 }
 
 async function createPokemon(pokemon: IPokemon): Promise<void> {
-  const randomTimeout = Math.floor(Math.random() * 1000);
-  await new Promise((resolve) => setTimeout(resolve, randomTimeout));
+  // const randomTimeout = Math.floor(Math.random() * 1000);
+  // await new Promise((resolve) => setTimeout(resolve, randomTimeout));
   
   if (PokemonList.find((p) => p.id === pokemon.id)) {
     return Promise.reject(new Error('Pokemon already exists'));
